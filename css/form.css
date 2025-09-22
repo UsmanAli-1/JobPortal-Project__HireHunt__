@@ -1,0 +1,105 @@
+/* form.css */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5faff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 450px;
+    margin: auto;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Heading */
+.container h1 {
+    text-align: center;
+    color: #5c9ded;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Label */
+.container label {
+    font-weight: 600;
+    color: #2d3e50;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Input & Select */
+.container input[type="text"],
+.container input[type="date"],
+.container input[type="file"],
+.container input[type="password"],
+.container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 6px;
+    background-color: #fdfdfd;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.container input:focus,
+.container select:focus {
+    outline: none;
+    border-color: #5c9ded;
+}
+
+/* Button */
+.container .btn {
+    background-color: #5c9ded;
+    color: white !important;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 25px;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.container .btn:hover {
+    background-color: #3c7fd6;
+    color: white !important;
+}
+
+/* Icons inside button (if you ever use) */
+.container .btn i {
+    margin-right: 8px;
+}
+
+/* Mobile Friendly */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .container .btn {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+}

@@ -1,0 +1,440 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5faff;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #2d3e50;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+header .actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+header .btn,
+header .btn a {
+    padding: 8px 14px;
+    background-color: #5c9ded;
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-block;
+}
+
+header .btn:hover,
+header .btn a:hover {
+    background-color: #3c7fd6;
+    color: white !important;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    margin-top: 10px;
+}
+
+thead {
+    background-color: #5c9ded;
+    color: white;
+}
+
+thead th {
+    padding: 14px 16px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0f2f1;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fb;
+}
+
+tbody td {
+    padding: 12px 16px;
+    font-size: 15px;
+}
+
+tbody td a {
+    background-color: #5c9ded;
+    color: white !important;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+tbody td a:hover {
+    background-color: #3c7fd6;
+    color: white !important;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    thead {
+        display: none;
+    }
+
+    table, tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        padding: 12px;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 12px;
+        border-bottom: 1px solid #ececec;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+
+    td::before {
+        content: attr(data-column);
+        font-weight: 600;
+        color: #5c9ded;
+        flex-basis: 45%;
+    }
+}
+
+/* Modal */
+.modal-body .container {
+    padding: 10px;
+}
+
+.modal-body label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #2d3e50;
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="date"],
+.modal-body select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 6px;
+    font-size: 14px;
+    background-color: #fdfdfd;
+    transition: border-color 0.3s ease;
+}
+
+.modal-body input:focus,
+.modal-body select:focus {
+    outline: none;
+    border-color: #5c9ded;
+}
+
+.modal-body h1 {
+    font-size: 22px;
+    color: #5c9ded;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-body .btn {
+    margin-top: 20px;
+    background-color: #5c9ded;
+    color: white !important;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    display: inline-block;
+}
+
+.modal-body .btn:hover {
+    background-color: #3c7fd6;
+    color: white !important;
+}
+
+/* Modal Footer */
+.modal-footer .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-left: 5px;
+}
+
+.modal-footer .btn-default {
+    background-color: #e0e0e0;
+    color: #333 !important;
+}
+
+.modal-footer .btn-primary {
+    background-color: #3c7fd6;
+    color: white !important;
+}
+
+/* Mobile Buttons */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    header .btn {
+        padding: 10px 10px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+
+    .modal-body h1 {
+        font-size: 18px;
+    }
+
+    .modal-body .btn {
+        font-size: 13px;
+        padding: 9px 14px;
+    }
+
+    tbody td a {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}
+@media (max-width: 480px) {
+    header .actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    header .actions form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    header .actions form button[name="logout_btn"] {
+        /* margin-top: 8px; */
+    }
+    
+}
+
+
+
+
+
+
+
+/* user dashboard work code */
+
+
+
+
+/* Job Card Styling */
+.job-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    padding: 18px 24px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.job-title {
+    font-size: 22px;
+    color: #2d3e50;
+    margin-bottom: 8px;
+}
+
+.job-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.job-details {
+    list-style: none;
+    margin-bottom: 16px;
+    color: #444;
+}
+
+.job-details li {
+    margin-bottom: 6px;
+}
+
+.apply-button {
+    text-align: right;
+}
+
+.apply-button .btn {
+    min-width: 140px;
+}
+
+/* Disabled / Applied button style */
+.btn:disabled,
+.btn.applied {
+    background-color: #b0c4de;
+    cursor: not-allowed;
+}
+
+/* Responsive Fixes for Job Cards & Buttons */
+@media (max-width: 480px) {
+    .job-card {
+        padding: 15px 18px;
+        margin: 12px 0;
+    }
+
+    .apply-button {
+        text-align: center;
+    }
+
+    .apply-button .btn {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+
+/* Search input inside header form */
+header .actions form input[type="text"] {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    min-width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+header .actions form input[type="text"]:focus {
+    outline: none;
+    border-color: #5c9ded;
+}
+
+/* Apply button styling (same as other buttons) */
+.apply-button .btn {
+    background-color: #5c9ded;
+    color: white !important;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    min-width: 140px;
+    text-align: center;
+    display: inline-block;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.apply-button .btn:hover {
+    background-color: #3c7fd6;
+    color: white !important;
+}
+
+/* Disabled / Applied button style */
+.apply-button .btn.applied,
+.apply-button .btn:disabled {
+    background-color: #b0c4de;
+    cursor: not-allowed;
+}
+
+/* Responsive fixes */
+@media (max-width: 480px) {
+    header .actions form input[type="text"] {
+        min-width: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .apply-button .btn {
+        width: 100%;
+        min-width: unset;
+        padding: 10px 0;
+    }
+}
+
+
+/* Styled Dropdown for Status (Admin Shortlist) */
+select.job-status {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 30px;
+    background-color: #fdfdfd;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath fill='%235c9ded' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px 8px;
+}
+
+/* Focused Dropdown */
+select.job-status:focus {
+    border-color: #5c9ded;
+    box-shadow: 0 0 0 2px rgba(92, 157, 237, 0.2);
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+}
